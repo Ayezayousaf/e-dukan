@@ -1,0 +1,129 @@
+// .search-input ...... search bar
+// .list-group-item .......... every item 
+
+
+
+
+
+// .mainContent.... main
+// .productContent .....every item
+// .search-input ...... search bar
+// fn();
+// function fn(){
+//     let input=document.querySelector('#search-input').value.toUpperCase();
+    // console.log(input)
+    // let main=document.querySelector('.mainContent');
+    // let name = main.getElementsByClassName('productContent')
+    // for(var i = 0; i<name.length; i++)
+    // {
+    //     // console.log(name[i])
+    //     var pd = name[i].textContent.toUpperCase()
+    //     // console.log(pd)
+    //     if (pd[i].includes(input)) {
+    //         var a =pd;
+    //         console.log(a)
+    //     }
+        
+        //     main.style.display="";
+        // }
+        // else{
+        //    main.style.display="none";
+        // }
+        // console.log(pd.includes(input))
+    // }
+    // console.log(pd.includes(input))
+    // if (pd.value == input.value) {
+    //     console.log("df")
+    // }
+
+        // else
+        // console.log("dfefer")
+
+        // console.log(pd)
+        // console.log(pd.textContent);
+        // if(pd)
+        // {
+        //     let txt = pd.textContent;
+        //     if(txt.toUpperCase().indexOf(input) > -1){
+        //         name[i].style.display= "";
+        //     }
+        //     else
+        //     {
+        //         name[i].style.display= "none";
+        //     }
+        // }
+    // }
+// let input=document.querySelector('#search-input').value.toUpperCase();
+//     let main=document.querySelector('.mainContent');
+//     let name = main.getElementsByClassName('productContent');
+//     console.log(name);
+//     name[0].getElementsByTagName('p')
+    // for(var i = 0; i<=name.length; 1++)
+    // {
+    //     let pd = name[0].getElementsByTagName('p')
+    // }
+
+
+// document.querySelector("#search-input").addEventListener('input', fn)
+// function fn()
+// {
+//     let input=document.querySelector("#search-input");
+//     // let filter = input.ariaValueMax.toLowerCase();
+//     let filter = input.value.toLowerCase();
+//     let item = document.querySelectorAll(".productContent");
+//     item.forEach((product)=>{
+//         let text=product.textContent;
+//         if(text.toLowerCase().includes(filter.toLowerCase()))
+//         {
+//             item.style.display = '';
+//         }
+//         else{
+//             item.style.display = 'none';
+//         }
+//     })
+// }
+document.getElementById("search-input").addEventListener("keyup",searchProducts)
+function searchProducts() {
+  // Get the input value
+  var inputValue = document.getElementById("input").value;
+  
+  // Get all product information elements
+  var productInfos = document.getElementsByClassName("productInfo");
+  
+  // Loop through all product information elements
+  for (var i = 0; i < productInfos.length; i++) {
+    // Get the product content element
+    var productContent = productInfos[i].getElementsByClassName("productContent")[0];
+    
+    // Check if the product content includes the input value
+    if (productContent.innerHTML.toLowerCase().includes(inputValue.toLowerCase())) {
+      // Show the product information element
+      productInfos[i].style.display = "block";
+    } else {
+      // Hide the product information element
+      productInfos[i].style.display = "none";
+    }
+  }
+}
+
+Billing details of products
+<div class="item">
+        
+<label>Selected Items :</label>
+<?php while(  $row = mysqli_fetch_assoc($res)){ 
+  ?>
+
+<ul type="">
+
+<li><?php echo $row['p_type'] ."   ==>  $". $row['price'];
+} ?></li>
+</ul>
+
+</div>
+<h2>
+
+
+<label>Total : <span>$ <?php echo $sum ?></span></label>
+</h2>
+  <input type="hidden" name="p" value=" <?php echo $sum ;} 
+  ?> " >

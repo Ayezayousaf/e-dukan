@@ -1,0 +1,219 @@
+nav{
+	padding: 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+    position:fixed;
+	background-color: white;
+    z-index: 1;
+    justify-content: space-between;
+    border-bottom:2px solid #6d355c;
+}
+.menu { 
+    display: flex;
+	padding-right: 20px;  
+    align-items: center;
+}
+.menu img{
+    margin: 5px;  
+}
+.logo img{
+	padding-top: 5px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background-color:#6d355c;
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    
+}
+.search input[type=text] {
+    max-width: 200px;
+    border: none;
+	font-family:cursive;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+}
+.btn{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	padding: 5px;
+	margin-left: 10px;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 10px #6d355c;
+}
+#content {
+	padding-top: 29px;
+}
+#content .mainContent {
+	margin-top: 50px;
+	float: left;
+	width: 90%;
+	text-align: center;
+	padding-left: 4%;
+}
+#mainWrapper {
+	width: 80%;
+	padding-left: 10%;
+	padding-top: 5%;
+}
+#content .mainContent .productRow {
+	overflow: hidden;
+	/* color: rgba(146,146,146,1.00); */
+}
+.mainContent .productRow .productInfo {
+	float: left;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 22%;
+}
+/* Prices of a products in catalog */
+.productRow .productInfo .price {
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 22px;
+	position: relative;
+	top: -20px;
+}
+/* Content holder for products in catalog*/
+.productRow .productInfo .productContent {
+	position: relative;
+	top: -37px;
+	font-size: 14px;
+	font-family: source-sans-pro, sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	color: rgba(146,146,146,1.00);
+	white-space: pre-wrap;
+}
+/* Buy button for products in catalog */
+.productRow .productInfo .buyButton {
+	position: relative;
+	top: -48px;
+	
+	width: 110%;
+	background-color:rgb(104, 98, 98);
+	color:#6d355c;
+	height: 35px;
+	font-weight: bolder;
+	color: rgba(255,255,255,1.0);
+	border-style: none;
+	font-family: cursive;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+.productRow .productInfo .buyButton:hover{
+	font-weight: bolder;
+    rotate: ('-30deg');
+	/* background-color: #CDE900; */
+	background-color: rgba(206, 0, 233, 0.7);
+	color:rgb(104, 98, 98);
+
+}
+/* Product's images in catalog */
+.productInfo div img {
+	width: 140px;
+	height: 140px;
+}
+
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #myModal .modal-content {
+	position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: normal;
+    border: 1px solid#6d355c;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px#6d355c;
+    width: 40%;
+	/* height: 25%; */
+  }
+  .close i{
+	font-size: 30px;
+	cursor: pointer;
+  }
+/* Media query for tablets */
+@media screen and (max-width:700px)
+{
+#content {
+	position: relative;
+	top: -22px;
+	width: 100%;
+	overflow: hidden;
+	
+}
+#mainWrapper #content .mainContent {
+	overflow: hidden;
+	margin: auto;
+	width: 100%;
+	margin-top: 40px;
+}
+/* Prices of products in catalog view */
+.productRow .productInfo .price {
+	font-size: 19px;
+}
+/* Content holders in catalog view */
+.productRow .productInfo .productContent {
+	font-size: 16px;
+}
+/* Buy buttons in catalog view */
+.productRow .productInfo .buyButton {
+	font-size: 15px;
+}
+}
+@media screen and (max-width:480px) {
+	nav{
+		flex-wrap: wrap;
+	}
+	.search{
+		width: 70%;
+		margin: 3px auto;
+		order:3;
+	}
+	.logo img{
+		width: 100px;
+		padding-top: 5px;
+	}
+	#content{
+		margin-top: 100px;
+	}
+.mainContent .productRow .productInfo {
+	width: 100%;
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	margin: auto;
+	left: -2%;
+}
+/* Main content which excludes the sidebar */
+#mainwrapper #content .mainContent {
+	margin-top: -81px;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+}
